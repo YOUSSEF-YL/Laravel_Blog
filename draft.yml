@@ -1,0 +1,34 @@
+models:
+    Models\category:
+        patent_id: id foreign:categories nullble
+        lft: integer unsigned nullable
+        rgt: integer unsigned nullable
+        depth: integer unsigned nullable
+        name: string
+        slug: string
+        timestamps: true
+        softDeletes: true
+        relationships: 
+            hasMany: Article
+    
+    Models\Article:
+        category_id: id foreign
+        title: string
+        slug: string unique defult:''
+        content: text
+        image: string nullable
+        status: enum:PUBLISHED,DRAFT
+        date: date
+        featured: boolean default:0
+        timestamps: true
+        softDeletes: true
+        relationships: 
+            belongsToMany: Tag
+    Models\Tag:
+        name: string
+        slug: string unique
+        timestamps: true
+        softDeletes: true
+        relationships: 
+            belongsToMany: Article
+seeders: Article, category, Tag

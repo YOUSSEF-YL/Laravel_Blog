@@ -1,0 +1,18 @@
+created:
+    - database/factories/Models/CategoryFactory.php
+    - database/factories/Models/ArticleFactory.php
+    - database/factories/Models/TagFactory.php
+    - database/migrations/2022_05_10_200001_create_categories_table.php
+    - database/migrations/2022_05_10_200002_create_articles_table.php
+    - database/migrations/2022_05_10_200003_create_tags_table.php
+    - database/migrations/2022_05_10_200004_create_article_tag_table.php
+    - app/Models/category.php
+    - app/Models/Article.php
+    - app/Models/Tag.php
+    - database/seeders/ArticleSeeder.php
+    - database/seeders/CategorySeeder.php
+    - database/seeders/TagSeeder.php
+models:
+    Models\category: { patent_id: 'id foreign:categories nullble', lft: 'integer unsigned nullable', rgt: 'integer unsigned nullable', depth: 'integer unsigned nullable', name: string, slug: string, timestamps: timestamps, softdeletes: softDeletes, relationships: { hasMany: Article } }
+    Models\Article: { category_id: 'id foreign', title: string, slug: 'string unique defult:''''', content: text, image: 'string nullable', status: 'enum:PUBLISHED,DRAFT', date: date, featured: 'boolean default:0', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: Tag } }
+    Models\Tag: { name: string, slug: 'string unique', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: Article } }
