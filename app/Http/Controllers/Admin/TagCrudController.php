@@ -42,7 +42,7 @@ class TagCrudController extends CrudController
         CRUD::column('id');
         CRUD::column('name');
         CRUD::column('slug');
-        CRUD::column('deleted_at');
+       // CRUD::column('deleted_at');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 

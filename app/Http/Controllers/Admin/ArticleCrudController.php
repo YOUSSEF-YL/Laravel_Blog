@@ -73,12 +73,12 @@ class ArticleCrudController extends CrudController
         CRUD::field('category_id');
         CRUD::field('title');
         CRUD::field('slug');
-        CRUD::field('content');
+        CRUD::field('content')->type('summernote');
         CRUD::field('image');
         CRUD::field('status');
         CRUD::field('date');
         CRUD::field('featured');
-        CRUD::field('deleted_at');
+       // CRUD::field('deleted_at');
         CRUD::field('created_at');
         CRUD::field('updated_at');
 
