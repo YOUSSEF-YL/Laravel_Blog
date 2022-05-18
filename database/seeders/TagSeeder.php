@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Models\Tag;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder

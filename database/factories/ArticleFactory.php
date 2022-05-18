@@ -1,11 +1,11 @@
 <?php
 
-namespace Database\Factories\Models;
+namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use App\Models\Models\Article;
-use App\Models\Models\Category;
+use App\Models\Article;
+use App\Models\Category;
 
 class ArticleFactory extends Factory
 {

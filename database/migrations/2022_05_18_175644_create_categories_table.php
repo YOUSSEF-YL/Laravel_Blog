@@ -13,11 +13,8 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('patent_id')->constrained('categories');
             $table->unsignedInteger('lft')->nullable();
             $table->unsignedInteger('rgt')->nullable();
             $table->unsignedInteger('depth')->nullable();
@@ -26,8 +23,6 @@ class CreateCategoriesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**

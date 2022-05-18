@@ -66,9 +66,9 @@ class TagCrudController extends CrudController
         CRUD::field('id');
         CRUD::field('name');
         CRUD::field('slug');
-        CRUD::field('deleted_at');
+        //CRUD::field('deleted_at');
         CRUD::field('created_at');
-        CRUD::field('updated_at');
+       // CRUD::field('updated_at');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

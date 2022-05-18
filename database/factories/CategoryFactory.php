@@ -1,11 +1,10 @@
 <?php
 
-namespace Database\Factories\Models;
+namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use App\Models\Models\Category;
-use App\Models\Models\category;
+use App\Models\category;
 
 class CategoryFactory extends Factory
 {
@@ -24,7 +23,6 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'patent_id' => Category::factory(),
             'lft' => $this->faker->randomNumber(),
             'rgt' => $this->faker->randomNumber(),
             'depth' => $this->faker->randomNumber(),

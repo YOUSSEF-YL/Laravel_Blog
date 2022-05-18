@@ -39,16 +39,16 @@ class CategoryCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
+       // CRUD::column('id');
         CRUD::column('patent_id');
-        CRUD::column('lft');
-        CRUD::column('rgt');
-        CRUD::column('depth');
+       // CRUD::column('lft');
+       // CRUD::column('rgt');
+      //  CRUD::column('depth');
         CRUD::column('name');
         CRUD::column('slug');
-        CRUD::column('deleted_at');
+       // CRUD::column('deleted_at');
         CRUD::column('created_at');
-        CRUD::column('updated_at');
+       // CRUD::column('updated_at');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -67,11 +67,11 @@ class CategoryCrudController extends CrudController
     {
         CRUD::setValidation(CategoryRequest::class);
 
-        CRUD::field('id');
+       // CRUD::field('id');
         CRUD::field('patent_id');
-        CRUD::field('lft');
-        CRUD::field('rgt');
-        CRUD::field('depth');
+       // CRUD::field('lft');
+       // CRUD::field('rgt');
+       // CRUD::field('depth');
         CRUD::field('name');
         CRUD::field('slug');
      //   CRUD::field('deleted_at');

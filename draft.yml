@@ -1,6 +1,5 @@
 models:
-    Models\category:
-        patent_id: id foreign:categories nullble
+    category:
         lft: integer unsigned nullable
         rgt: integer unsigned nullable
         depth: integer unsigned nullable
@@ -11,7 +10,7 @@ models:
         relationships: 
             hasMany: Article
     
-    Models\Article:
+    Article:
         category_id: id foreign
         title: string
         slug: string unique defult:''
@@ -24,7 +23,7 @@ models:
         softDeletes: true
         relationships: 
             belongsToMany: Tag
-    Models\Tag:
+    Tag:
         name: string
         slug: string unique
         timestamps: true
