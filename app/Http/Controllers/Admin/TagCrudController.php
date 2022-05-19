@@ -63,11 +63,11 @@ class TagCrudController extends CrudController
     {
         CRUD::setValidation(TagRequest::class);
 
-        CRUD::field('id');
+      //  CRUD::field('id');
         CRUD::field('name');
         CRUD::field('slug');
         //CRUD::field('deleted_at');
-        CRUD::field('created_at');
+       // CRUD::field('created_at');
        // CRUD::field('updated_at');
 
         /**

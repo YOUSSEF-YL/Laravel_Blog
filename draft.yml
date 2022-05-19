@@ -12,6 +12,7 @@ models:
     
     Article:
         category_id: id foreign
+        author: string
         title: string
         slug: string unique defult:''
         content: text

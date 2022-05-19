@@ -25,6 +25,7 @@ class ArticleFactory extends Factory
     {
         return [
             'category_id' => Category::factory(),
+            'author' => $this->faker->word,
             'title' => $this->faker->sentence(4),
             'slug' => $this->faker->slug,
             'content' => $this->faker->paragraphs(3, true),

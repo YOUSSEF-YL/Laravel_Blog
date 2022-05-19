@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
 
 class Tag extends Model
 {
-    use HasFactory, SoftDeletes ,CrudTrait;
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.

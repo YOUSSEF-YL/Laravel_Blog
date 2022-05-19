@@ -8,12 +8,14 @@ class PagesController extends Controller
 {
     public function index()
     {
+        $Article = Article::all();
         return view('index');
+      //  return view('index')->with('Article', $Article);
     }
 
 
     public function post()
     {
-        return view('post');
+       // return view('post');
     }
 }

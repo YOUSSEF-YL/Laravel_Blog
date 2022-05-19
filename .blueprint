@@ -2,10 +2,10 @@ created:
     - database/factories/CategoryFactory.php
     - database/factories/ArticleFactory.php
     - database/factories/TagFactory.php
-    - database/migrations/2022_05_18_175644_create_categories_table.php
-    - database/migrations/2022_05_18_175645_create_articles_table.php
-    - database/migrations/2022_05_18_175646_create_tags_table.php
-    - database/migrations/2022_05_18_175647_create_article_tag_table.php
+    - database/migrations/2022_05_19_174037_create_categories_table.php
+    - database/migrations/2022_05_19_174038_create_articles_table.php
+    - database/migrations/2022_05_19_174039_create_tags_table.php
+    - database/migrations/2022_05_19_174040_create_article_tag_table.php
     - app/Models/category.php
     - app/Models/Article.php
     - app/Models/Tag.php
@@ -13,7 +13,7 @@ created:
     - database/seeders/CategorySeeder.php
     - database/seeders/TagSeeder.php
 models:
-    Article: { category_id: 'id foreign', title: string, slug: 'string unique defult:''''', content: text, image: 'string nullable', status: 'enum:PUBLISHED,DRAFT', date: date, featured: 'boolean default:0', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: Tag } }
+    Article: { category_id: 'id foreign', author: string, title: string, slug: 'string unique defult:''''', content: text, image: 'string nullable', status: 'enum:PUBLISHED,DRAFT', date: date, featured: 'boolean default:0', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: Tag } }
     Tag: { name: string, slug: 'string unique', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: Article } }
     Category: { patent_id: 'biginteger unsigned', lft: 'integer unsigned nullable', rgt: 'integer unsigned nullable', depth: 'integer unsigned nullable', name: string, slug: string }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }

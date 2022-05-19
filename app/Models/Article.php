@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 class Article extends Model
 {
-    use HasFactory, SoftDeletes ,CrudTrait;
+    use HasFactory, SoftDeletes , CrudTrait ;
 
     /**
      * The attributes that are mass assignable.
@@ -17,6 +17,7 @@ class Article extends Model
      */
     protected $fillable = [
         'category_id',
+        'author',
         'title',
         'slug',
         'content',
