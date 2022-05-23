@@ -40,7 +40,7 @@ class ArticleCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('id');
-        CRUD::column('category_id');
+       // CRUD::column('category_id');
         CRUD::column('title');
         CRUD::column('slug');
         CRUD::column('content');

@@ -120,7 +120,7 @@
          			<div id="featured-post-slider" class="flexslider">
 			   			<ul class="slides">
 
-				   			<li>
+				   			{{-- <li>
 				   				<div class="featured-post-slide">
 
 						   			<div class="post-background" style="background-image:url('images/thumbs/featured/featured-1.jpg');"></div>
@@ -139,6 +139,7 @@
 				   				</div>
 				   			</li> <!-- /slide -->
 
+							   
 				   			<li>
 				   				<div class="featured-post-slide">
 
@@ -175,7 +176,28 @@
 						   			</div>
 
 				   				</div>
-				   			</li> <!-- end slide -->
+				   			</li> <!-- end slide --> --}}
+
+							   @foreach ($Articles as $article)
+							   <li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="{{$article->image}}"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+										<ul class="entry-meta">
+											 <li>{{$article->date}}</li> 
+											 <li><a href="#" >{{$article->author}}</a></li>				
+										 </ul>	
+
+										<h1 class="slide-title"><a href="single-standard.html" title="">{{$article->title}}</a></h1> 
+									</div> 				   					  
+							
+								</div>
+							</li> <!-- /slide -->
+							   @endforeach
 
 				   		</ul> <!-- end slides -->
 				   	</div> <!-- end featured-post-slider -->        			
