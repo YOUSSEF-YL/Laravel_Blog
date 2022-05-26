@@ -19,8 +19,9 @@ class ArticleCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    
 
-    private function getFieldsData($show = False)
+    private function getFieldsData($ShowOperation = False)
     {
        return [
 
@@ -66,8 +67,8 @@ class ArticleCrudController extends CrudController
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
-        $this->crud->set('show.setFromDb', false);
-        $this->crud->addColumns($this->getFieldsData(TRUE));
+        $this->crud->set('ShowOperation.setFromDb', false);
+        $this->crud->addColumn($this->getFieldsData(TRUE));
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
