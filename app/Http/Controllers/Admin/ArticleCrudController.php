@@ -6,6 +6,7 @@ use App\Http\Requests\ArticleRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
+
 /**
  * Class ArticleCrudController
  * @package App\Http\Controllers\Admin
@@ -19,6 +20,19 @@ class ArticleCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
+    private function getFieldsData($show = False)
+    {
+       return [
+
+        [
+            'label' => "Image",
+            'name' => "image",
+            'type' => 'image',
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 1, // omit or set to 0 to allow any aspect ratio
+        ]
+       ];
+    }
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
      * 
@@ -52,6 +66,9 @@ class ArticleCrudController extends CrudController
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
+        $this->crud->set('show.setFromDb', false);
+        $this->crud->addColumns($this->getFieldsData(TRUE));
+
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -75,10 +92,21 @@ class ArticleCrudController extends CrudController
         CRUD::field('title');
         CRUD::field('slug');
         CRUD::field('content')->type('summernote');
-        CRUD::field('image')->type('upload');
+        //CRUD::field('image')->type('upload');
         CRUD::field('status');
         CRUD::field('date');
         CRUD::field('featured');
+        //CRUD::setImageAttribute(ArticleRequest->image);
+        $this->crud->addField([ // image
+            'label' => "image",
+            'name' => "image",
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'uploads'
+        ],'both');
+
+        
+        
        // CRUD::field('deleted_at');
       //  CRUD::field('created_at');
        // CRUD::field('updated_at');
@@ -100,4 +128,8 @@ class ArticleCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+
+
+  
 }
+
