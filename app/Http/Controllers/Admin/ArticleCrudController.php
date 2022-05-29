@@ -21,19 +21,7 @@ class ArticleCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
     
 
-    private function getFieldsData($ShowOperation = False)
-    {
-       return [
-
-        [
-            'label' => "Image",
-            'name' => "image",
-            'type' => 'image',
-            'crop' => true, // set to true to allow cropping, false to disable
-            'aspect_ratio' => 1, // omit or set to 0 to allow any aspect ratio
-        ]
-       ];
-    }
+   
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
      * 
@@ -44,6 +32,8 @@ class ArticleCrudController extends CrudController
         CRUD::setModel(\App\Models\Article::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/article');
         CRUD::setEntityNameStrings('article', 'articles');
+
+      
     }
 
     /**
@@ -57,18 +47,17 @@ class ArticleCrudController extends CrudController
         CRUD::column('id');
        // CRUD::column('category_id');
         CRUD::column('title');
-        CRUD::column('slug');
-        CRUD::column('content');
-        CRUD::column('image');
-        CRUD::column('status');
-        CRUD::column('date');
+       // CRUD::column('slug');
+       // CRUD::column('content');
+       // CRUD::column('image');
+       // CRUD::column('status');
+        //CRUD::column('date');
         CRUD::column('featured');
-        CRUD::column('deleted_at');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+       // CRUD::column('deleted_at');
+       // CRUD::column('created_at');
+      //  CRUD::column('updated_at');
 
-        $this->crud->set('ShowOperation.setFromDb', false);
-        $this->crud->addColumn($this->getFieldsData(TRUE));
+      
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -93,7 +82,7 @@ class ArticleCrudController extends CrudController
         CRUD::field('title');
         CRUD::field('slug');
         CRUD::field('content')->type('summernote');
-        //CRUD::field('image')->type('upload');
+        CRUD::field('image')->type('upload');
         CRUD::field('status');
         CRUD::field('date');
         CRUD::field('featured');
@@ -131,6 +120,6 @@ class ArticleCrudController extends CrudController
     }
 
 
-  
+    
 }
 

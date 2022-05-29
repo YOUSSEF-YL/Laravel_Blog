@@ -178,12 +178,13 @@
 				   				</div>
 				   			</li> <!-- end slide --> --}}
 
-							   @foreach ($Articles as $article)
+							   @foreach ($featuredArticles as $article)
 							   <li>
 								<div class="featured-post-slide">
 
-									<div class="post-background" style="{{$article->image}}"></div>
-
+									<div class="post-background" style="background-image:url({{'http://localhost/blog/public/uploads/articles/' . $article->image}})"></div>
+									
+									
 									<div class="overlay"></div>			   		
 
 									<div class="post-content">
@@ -208,7 +209,7 @@
 
                <div class="entry-thumb">
                   <a href="single-standard.html" class="thumb-link">
-	                  <img src="images/thumbs/diagonal-building.jpg" alt="building">             
+	                  <img src="{{asset('asset/images/thumbs/diagonal-building.jpg')}}" alt="building">             
                   </a>
                </div>
 
@@ -236,7 +237,7 @@
 
                <div class="entry-thumb">
                   <a href="single-standard.html" class="thumb-link">
-	                  <img src="images/thumbs/ferris-wheel.jpg" alt="ferris wheel">                   
+	                  <img src="{{asset('asset/images/thumbs/ferris-wheel.jpg')}}" alt="ferris wheel">                   
                   </a>
                </div>
 
@@ -265,7 +266,7 @@
 
                <div class="entry-thumb">
                   <a href="single-audio.html" class="thumb-link">
-	                  <img src="images/thumbs/concert.jpg" alt="concert">                      
+	                  <img src="{{asset('asset/images/thumbs/concert.jpg')}}" alt="concert">                      
                   </a>
 
                   <div class="audio-wrap">
