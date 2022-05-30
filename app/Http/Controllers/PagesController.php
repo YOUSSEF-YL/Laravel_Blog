@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
@@ -18,8 +19,5 @@ class PagesController extends Controller
     }
 
 
-    public function post()
-    {
-        return view('post');
-    }
+    
 }
