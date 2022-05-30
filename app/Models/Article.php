@@ -131,4 +131,10 @@ class Article extends Model
         $this->attributes['image'] = $input['image'];
 
     }
+
+    public function getAbbreviatedPostAttribute() 
+    {
+        //return str_limit(strip_tags($this->post_body),100,'...');
+        return strip_tags($this->content);
+    }
 }
