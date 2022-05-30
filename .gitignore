@@ -13,5 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-draft.yaml
 public/uploads/*
+draft.yaml
