@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 /*
@@ -19,5 +20,6 @@ Route::get('/', function () {
 
 
 Route::get('/',[PagesController::class,'index']);
-Route::get('/post',[PagesController::class,'post']);
-#######
+//Route::get('/post',[PagesController::class,'post']);
+
+//Route::resource('/post',[ArticleController::class]);
