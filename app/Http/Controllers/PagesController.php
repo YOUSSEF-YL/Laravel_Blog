@@ -11,15 +11,15 @@ class PagesController extends Controller
     {
         $Articles  = DB::table('articles')->where('featured','0')->get();
         $featuredArticles = DB::table('articles')->where('featured','1')->get();
-        $category = category::all();
+        //$category = category::all();
       
 
-      return view('index' , compact('Articles','featuredArticles','category'));
+      return view('index' , compact('Articles','featuredArticles'));
     }
 
 
     public function post()
     {
-       // return view('post');
+        return view('post');
     }
 }

@@ -17,9 +17,9 @@
 
  	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.css">  
-   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="{{asset('asset/css/base.css')}}">
+   <link rel="stylesheet" href="{{asset('asset/css/vendor.css')}}">  
+   <link rel="stylesheet" href="{{asset('asset/css/main.css')}}">
         
 
    <!-- script
@@ -113,13 +113,13 @@
 						<div class="post-slider flexslider">
 							<ul class="slides">
 								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-01.jpg"> 
+									<img src="{{asset('asset/images/thumbs/single/gallery/single-gallery-01.jpg')}}"> 
 								</li>
 								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-02.jpg"> 
+									<img src="{{asset('asset/images/thumbs/single/gallery/single-gallery-02.jpg')}}"> 
 								</li>
 								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-03.jpg"> 
+									<img src="{{asset('asset/images/thumbs/single/gallery/single-gallery-03.jpg')}}"> 
 								</li>
 							</ul>							
 						</div> 

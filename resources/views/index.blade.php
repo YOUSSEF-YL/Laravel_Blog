@@ -28,8 +28,8 @@
    ================================================== -->
 	{{-- <script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script> --}}
-    <link rel="stylesheet" href="{{asset('js/modernizr.js')}}">
-    <link rel="stylesheet" href="{{asset('js//pace.min.js')}}">
+    <link rel="stylesheet" href="{{asset('asset/js/modernizr.js')}}">
+    <link rel="stylesheet" href="{{asset('asset/js//pace.min.js')}}">
    <!-- favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
