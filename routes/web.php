@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/',[PagesController::class,'index']);
 Route::get('/post',[PagesController::class,'post']);
+#######
