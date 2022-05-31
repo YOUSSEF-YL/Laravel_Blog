@@ -51,7 +51,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-          return view('post')->with('article',Article::where('id',$id));
+         // return view('post')->with('article',Article::where('id',$id));
 
         // $article = Article::where('id',$id);
         // dd( $article);
