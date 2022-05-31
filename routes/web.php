@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 
 Route::get('/',[PagesController::class,'index']);
-//Route::get('/post',[PagesController::class,'post']);
 
-//Route::resource('/post',[ArticleController::class]);
+
+Route::get('/{id}',[ArticleController::class,'show']);

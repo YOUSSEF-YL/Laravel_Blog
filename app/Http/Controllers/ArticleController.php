@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
     /**
@@ -13,7 +14,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $Articles  = DB::table('articles')->where('featured','0')->get();
+        $featuredArticles = DB::table('articles')->where('featured','1')->get();
+        //$category = category::all();
+      
+
+      return view('index' , compact('Articles','featuredArticles'));
     }
 
     /**
@@ -47,8 +53,8 @@ class ArticleController extends Controller
     {
           return view('post')->with('article',Article::where('id',$id));
 
-         $article = Article::where('id',$id);
-         dd( $article);
+        // $article = Article::where('id',$id);
+        // dd( $article);
     }
 
     /**
