@@ -108,20 +108,14 @@
    		<div class="col-twelve">
 
    			<article class="format-gallery">  
-
+				<h1>  {{$article->title}}</h1>
    				<div class="content-media">
 						<div class="post-slider flexslider">
 							<ul class="slides">
 								<li>
 									<img src="{{asset('/uploads/articles/'.$article->image)}}"> 
 								</li>
-								<li>
-									{{-- <img src="{{asset('asset/images/thumbs/single/gallery/single-gallery-02.jpg')}}">  --}}
-									<img src="{{asset('public/uploads/articles/'.$article->image)}}"> 
-								</li>
-								<li>
-									<img src="{{URL('public/uploads/articles/'.$article->image)}}"> 
-								</li>
+								
 							</ul>							
 						</div> 
 					</div>
@@ -132,7 +126,7 @@
 
 						<ul class="entry-meta">
 							<li class="date">{{$article->date->format('M d Y')}}</li>						
-							<li class="cat"><a href="">Wordpress</a><a href="">Design</a></li>				
+							<li class="cat"><a href="">{{\App\Models\Category::where(['id' => $article->category_id])->pluck('name')->first();}}</a><a href="">Design</a></li>				
 						</ul>						
 						
 							{!!$article->content!!}
