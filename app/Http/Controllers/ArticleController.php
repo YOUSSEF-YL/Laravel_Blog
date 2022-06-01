@@ -49,12 +49,13 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($Slug)
     {
-         // return view('post')->with('article',Article::where('id',$id));
+          return view('post')->with('article',Article::where('Slug',$Slug)->first());
 
         // $article = Article::where('id',$id);
-        // dd( $article);
+       //  dd( $article);
+       
     }
 
     /**

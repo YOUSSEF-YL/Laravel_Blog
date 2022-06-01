@@ -22,4 +22,4 @@ Route::get('/', function () {
 Route::get('/',[PagesController::class,'index']);
 
 
-Route::get('/Post/{id}',[ArticleController::class,'show']);
+Route::get('/Post/{Slug}',[ArticleController::class,'show']);
