@@ -51,59 +51,7 @@
 	         <a href="index.html">Author</a>
 	      </div>
 
-		  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav><!-- end main-nav-wrap -->
+		  @include('layouts.nav')
 
 			<div class="search-wrap">
 				
@@ -218,10 +166,12 @@
 											 <li><a href="#" >{{$article->author}}</a></li>				
 										 </ul>	
 
-										<h1 class="slide-title"><a href="single-standard.html" title="">{{$article->title}}</a></h1> 
+										<h1 class="slide-title"><a href="Post/{{$article->slug}}" title="">{{$article->title}}</a></h1> 
 									</div> 				   					  
 							
 								</div>
+
+								
 							</li> <!-- /slide -->
 							   @endforeach
 
@@ -236,7 +186,7 @@
 			 <article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-				   <a href="single-standard.html" class="thumb-link">
+				   <a href="Post/{{$Article->slug}}" class="thumb-link">
 					   <img src="{{asset('uploads/articles/'.$Article->image)}}" alt="building">
 					          
 				   </a>
@@ -247,16 +197,16 @@
  
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">{{$Article->category_id}}</a> 
-								<a href="#">{{\App\Models\Category::where(['id' => $Article->category_id])->pluck('name')->first();}}</a>               				
+								<a href="Post/{{$Article->slug}}">{{$Article->category_id}}</a> 
+								<a href="Post/{{$Article->slug}}">{{\App\Models\Category::where(['id' => $Article->category_id])->pluck('name')->first();}}</a>               				
 							</span>			
 						</div>
  
-						<h1 class="entry-title"><a href="single-standard.html">{{$Article->title}}.</a></h1>
+						<h1 class="entry-title"><a href="Post/{{$Article->slug}}">{{$Article->title}}.</a></h1>
 						
 					</div>
 						 <div class="entry-excerpt">
-							{{\Illuminate\Support\Str::words(html_entity_decode(strip_tags($article->content)),40)}}
+							{{\Illuminate\Support\Str::words(html_entity_decode(strip_tags($Article->content)),40)}}
 						 </div>
 				</div>
  
