@@ -17,8 +17,8 @@
 
  	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="{{asset('css/base.css')}}">
+   <link rel="stylesheet" href="{{asset('css/vendor.css')}}">
    <link rel="stylesheet" href="{{asset('asset/css/base.css')}}">  
    <link rel="stylesheet" href="{{asset('asset/css/vendor.css')}}">
         
@@ -26,8 +26,8 @@
    <link rel="stylesheet" href="{{asset('asset/js/main.js')}}">
    <!-- script
    ================================================== -->
-	{{-- <script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script> --}}
+	 <script src=""{{asset('js/modernizr.js')}}"></script>
+	<script src=""{{asset('js/pace.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('asset/js/modernizr.js')}}">
     <link rel="stylesheet" href="{{asset('asset/js//pace.min.js')}}">
    <!-- favicons
