@@ -22,9 +22,8 @@
                     <li><a href="single-standard.html">Standard Post</a></li>
                  </ul>
                 </li>
-                <li><a href="style-guide.html" title="">Styles</a></li>
-                <li><a href="about.html" title="">About</a></li>	
-                <li><a href="contact.html" title="">Contact</a></li>
+                <li><a href="../about" title="">About</a></li>	
+                <li><a href="../contact" title="">Contact</a></li>
                 <li> 
                      <!-- Authentication Links -->
                      @guest
