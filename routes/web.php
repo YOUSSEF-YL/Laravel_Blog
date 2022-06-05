@@ -20,7 +20,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/index',[PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
 Route::get('/contact',[PagesController::class,'contact']);
-
+Route::get('/category',[PagesController::class,'category']);
 
 Route::get('/Post/{Slug}',[ArticleController::class,'show']);
 

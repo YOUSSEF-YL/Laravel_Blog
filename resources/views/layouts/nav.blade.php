@@ -1,9 +1,9 @@
 
 	   	<nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li><a href="index.html" title="">Home</a></li>									
+                <li><a href="/index" title="">Home</a></li>									
                 <li class="has-children">
-                    <a href="category.html" title="">Categories</a>
+                    <a href="/category" title="">Categories</a>
                     <ul class="sub-menu">
                     <li><a href="category.html">Wordpress</a></li>
                     <li><a href="category.html">HTML</a></li>

@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\category;
 use Illuminate\Http\Request;
-use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 class PagesController extends Controller
 {
@@ -28,4 +27,12 @@ class PagesController extends Controller
     {
       return view('about');
     }
+
+    public function category()
+    {
+      $categorys = category::all();
+
+      return view('category')->with('categorys',$categorys);
+    }
+    
 }
