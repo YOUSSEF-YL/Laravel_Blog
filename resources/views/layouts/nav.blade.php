@@ -5,12 +5,9 @@
                 <li class="has-children">
                     <a href="/category" title="">Categories</a>
                     <ul class="sub-menu">
-                    <li><a href="category.html">Wordpress</a></li>
-                    <li><a href="category.html">HTML</a></li>
-                    <li><a href="category.html">Photography</a></li>
-                    <li><a href="category.html">UI</a></li>
-                    <li><a href="category.html">Mockups</a></li>
-                    <li><a href="category.html">Branding</a></li>
+                   @foreach ( $categorys as $category)
+                   <li><a href="postsbycategory/{{$category->id}}">{{$category->name}}</a></li>
+                   @endforeach
                  </ul>
                 </li>
                 <li class="has-children current">

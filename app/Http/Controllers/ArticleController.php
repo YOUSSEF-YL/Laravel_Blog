@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
@@ -51,11 +52,19 @@ class ArticleController extends Controller
      */
     public function show($Slug)
     {
-          return view('post')->with('article',Article::where('Slug',$Slug)->first());
+          return view('post')
+          ->with('article',Article::where('Slug',$Slug)
+          ->first());
 
-        // $article = Article::where('id',$id);
-       //  dd( $article);
-       
+           
+    }
+
+    public function showbycategory($category_id)
+    {
+        $Articles  = DB::table('articles')->where('category_id',$category_id)->get();
+        $categorys = category::all();
+          return view('postsbycategory', 
+          compact('Articles','categorys'));
     }
 
     /**

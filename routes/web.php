@@ -23,6 +23,7 @@ Route::get('/contact',[PagesController::class,'contact']);
 Route::get('/category',[PagesController::class,'category']);
 
 Route::get('/Post/{Slug}',[ArticleController::class,'show']);
+Route::get('/postsbycategory/{category_id}',[ArticleController::class,'showbycategory']);
 
 Auth::routes();
 

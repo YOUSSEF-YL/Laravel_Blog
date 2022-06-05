@@ -15,7 +15,7 @@
    	<div class="row header-content">
 
    		<div class="logo">
-	         <a href="index.html">Author</a>
+	         <a href="index">Author</a>
 	      </div>
 
 		  @include('layouts.nav')
