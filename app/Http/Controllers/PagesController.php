@@ -20,19 +20,24 @@ class PagesController extends Controller
 
     public function contact()
     {
-      return view('contact');
+      $categorys = category::all();
+      return view('contact')
+      ->with('categorys',$categorys);
     }
 
     public function about()
     {
-      return view('about');
+      $categorys = category::all();
+      return view('about')
+      ->with('categorys',$categorys);
     }
 
     public function category()
     {
       $categorys = category::all();
 
-      return view('category')->with('categorys',$categorys);
+      return view('category')
+      ->with('categorys',$categorys);
     }
     
     
