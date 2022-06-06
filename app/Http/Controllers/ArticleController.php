@@ -51,8 +51,9 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($Slug)
-    {
-          return view('post')
+    {       
+         $categorys = category::all();
+          return view('post',compact('categorys'))
           ->with('article',Article::where('Slug',$Slug)
           ->first());
 

@@ -95,7 +95,7 @@
 
 					<div class="primary-content">
 
-						<h1 class="entry-title">{{$article->Title}}</h1>	
+						<h1 class="entry-title">{{$article->title}}</h1>	
 
 						<ul class="entry-meta">
 							<li class="date">{{$article->date->format('M d Y')}}</li>						
