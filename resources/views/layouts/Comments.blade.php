@@ -3,7 +3,7 @@
                             <head>
                                 <meta charset='utf-8'>
                                 <meta name='viewport' content='width=device-width, initial-scale=1'>
-                                <title>Snippet - GoSNippets</title>
+                               
                                 <link href='' rel='stylesheet'>
                                 <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
                                 <style> * {
@@ -283,7 +283,7 @@
                             <body oncontextmenu='return false' class='snippet-body'>
                             <!-- Main Container -->
 <div class="comments-container">
-    <h1>Comments <a href="">Go Snippets</a></h1>
+    <h1>Comments <a href=""></a></h1>
 
     <ul id="comments-list" class="comments-list">
         <li>
