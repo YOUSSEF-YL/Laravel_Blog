@@ -299,6 +299,23 @@
                         <i class="fa fa-heart"></i>
                     </div>
                     <div class="comment-content">
+                      <textarea name="" id="" cols="80" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="comment-main-level">
+                <!-- Avatar -->
+                <div class="comment-avatar"><img src="https://i.imgur.com/k7XVwpB.jpeg" alt=""></div>
+                <!-- Comments  -->
+                <div class="comment-box">
+                    <div class="comment-head">
+                        <h6 class="comment-name by-author"><a href="#">Ravi Raushan</a></h6>
+                        <span>55 minutes ago</span>
+                        <i class="fa fa-reply"></i>
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="comment-content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
                     </div>
                 </div>
