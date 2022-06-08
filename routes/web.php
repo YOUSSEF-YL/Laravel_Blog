@@ -3,6 +3,8 @@
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,10 +23,12 @@ Route::get('/index',[PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
 Route::get('/contact',[PagesController::class,'contact']);
 Route::get('/category',[PagesController::class,'category']);
-Route::get('/my_account',[PagesController::class,'myaccount'])->name('myaccount');
+
 Route::get('/Post/{Slug}',[ArticleController::class,'show']);
 Route::get('/postsbycategory/{category_id}',[ArticleController::class,'showbycategory']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/myaccount', UserController::class);

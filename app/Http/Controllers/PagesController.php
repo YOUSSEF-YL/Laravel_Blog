@@ -41,10 +41,5 @@ class PagesController extends Controller
       ->with('categorys',$categorys);
     }
     
-    public function myaccount()
-    {
-      $user = DB::table('users')->where('id','1')->get();
-      return view('my_account')->with('user',$user);
-     // dd($user);
-    }
+    
 }
