@@ -2,10 +2,10 @@ created:
     - database/factories/CategoryFactory.php
     - database/factories/ArticleFactory.php
     - database/factories/TagFactory.php
-    - database/migrations/2022_05_19_174037_create_categories_table.php
-    - database/migrations/2022_05_19_174038_create_articles_table.php
-    - database/migrations/2022_05_19_174039_create_tags_table.php
-    - database/migrations/2022_05_19_174040_create_article_tag_table.php
+    - database/migrations/2022_06_08_173309_create_categories_table.php
+    - database/migrations/2022_06_08_173310_create_articles_table.php
+    - database/migrations/2022_06_08_173311_create_tags_table.php
+    - database/migrations/2022_06_08_173312_create_article_tag_table.php
     - app/Models/category.php
     - app/Models/Article.php
     - app/Models/Tag.php

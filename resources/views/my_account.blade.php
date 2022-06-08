@@ -2038,6 +2038,12 @@ p {
     </style>
 </head>
 <body>
+
+
+
+
+  @foreach ($user as $usr)
+    
   <div class="main-content">
     <!-- Top navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -2192,13 +2198,13 @@ p {
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{$usr->username}}">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="{{$usr->email}}">
                       </div>
                     </div>
                   </div>
@@ -2206,13 +2212,13 @@ p {
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                      <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$usr->name}}">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
+                        <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="{{$usr->Lastename}}">
                       </div>
                     </div>
                   </div>
@@ -2274,4 +2280,5 @@ p {
       </div>
     </div>
   </footer>
+  @endforeach
 </body>
