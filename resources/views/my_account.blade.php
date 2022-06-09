@@ -2062,7 +2062,7 @@ p {
           </div>
         </form>
         <!-- User -->
-        <form action="/my_account" method="post">
+        <form action=" /myaccount/{{$usr->id }}/edit" method="post">
           @csrf
           <ul class="navbar-nav align-items-center d-none d-md-flex">
             <li class="nav-item dropdown">
@@ -2104,7 +2104,7 @@ p {
               </div>
             </li>
           </ul>
-        </form>
+        
       </div>
     </nav>
     <!-- Header -->
@@ -2123,6 +2123,7 @@ p {
         </div>
       </div>
     </div>
+  </form>
     <!-- Page content -->
     <div class="container-fluid mt--7">
       <div class="row">

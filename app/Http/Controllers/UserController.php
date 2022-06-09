@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use phpDocumentor\Reflection\DocBlock\Tags\Uses;
+use App\Models\User;
 class UserController extends Controller
 {
     /**
@@ -46,7 +47,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = DB::table('users')->where('id',$id)->get();
+        $user = User::find($id)->first();
         return view('my_account')->with('user',$user);
     }
 
@@ -58,7 +59,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+       $user = User::find($id);
+        //dd($user);
     }
 
     /**
