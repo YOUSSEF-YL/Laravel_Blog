@@ -72,7 +72,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::where('id',$id)->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'lastname' => $request->input('lastname'),
+            'username' => $request->input('username'),
+           // 'image'
+
+
+        ]);
+        return redirect('/index');
     }
 
     /**
