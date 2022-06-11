@@ -2043,7 +2043,7 @@ p {
 
 
   {{-- @foreach ($user as $user) --}}
-  <form action=" /myaccount/{{$user->id }}" method="post">
+  <form action=" /myaccount/{{$user->id }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="main-content">

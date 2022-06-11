@@ -70,17 +70,40 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function storimag(string $request)
+    {
+      
+
+       // 
+    }
+
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'image.*' => 'mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        $imag = time() .'_' . $request->input('image');
+
+
+        $file = $request->file('image') ;
+        $fileName =  time() .'_' . $file->getClientOriginalName() ;
+        $destinationPath = public_path().'/uploads/profile' ;
+        $file->move($destinationPath,$fileName);
+
+       // $request->image->move(public_path('\uploads\profile',$imagename));
+
         $user = User::where('id',$id)->update([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'lastname' => $request->input('lastname'),
             'username' => $request->input('username'),
-           // 'image'
-
-
+            'image' =>  $imag,
+           // 'image'image
+           
         ]);
+        
+        
         return redirect('/index');
     }
 
