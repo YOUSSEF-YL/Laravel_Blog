@@ -15,3 +15,4 @@ yarn-error.log
 /.vscode
 public/uploads/*
 /draft.yml
+/public/packages
