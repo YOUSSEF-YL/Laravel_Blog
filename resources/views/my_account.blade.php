@@ -2070,7 +2070,7 @@ p {
                 <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
-                      <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
+                      <img alt="Image placeholder" src="{{asset('uploads/profile/' . $user->image)}}">
                     </span>
                     <div class="media-body ml-2 d-none d-lg-block">
                       <span class="mb-0 text-sm  font-weight-bold">{{$user->name}}</span>
@@ -2132,7 +2132,7 @@ p {
                     <div class="col-lg-3 order-lg-2">
                       <div class="card-profile-image">
                         <a href="#">
-                          <img src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg" class="rounded-circle">
+                          <img src="{{asset('/uploads/profile/'.$user->image)}}" class="rounded-circle">
                           <input class=" rounded-circle" type="file" titl id="img" name="image" accept="image/*">
                         </a>
                       </div>
@@ -2140,10 +2140,6 @@ p {
                   </div>
                   <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                     <div class="d-flex justify-content-between">
-                      <a href="#" class="btn btn-sm btn-info mr-4">
-                      
-                      </a>
-                      <a href="#" class="btn btn-sm btn-default float-right">Message</a>
                     </div>
                   </div>
                   <div class="card-body pt-0 pt-md-4">
@@ -2169,7 +2165,7 @@ p {
                         <h3 class="mb-0">My account</h3>
                       </div>
                       <div class="col-4 text-right">
-                        <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                       
                       </div>
                     </div>
                   </div>

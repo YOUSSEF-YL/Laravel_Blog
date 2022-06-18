@@ -83,7 +83,7 @@ class UserController extends Controller
             'image.*' => 'mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        $imag = time() .'_' . $request->input('image');
+       
 
 
         $file = $request->file('image') ;
@@ -91,7 +91,8 @@ class UserController extends Controller
         $destinationPath = public_path().'/uploads/profile' ;
         $file->move($destinationPath,$fileName);
 
-       // $request->image->move(public_path('\uploads\profile',$imagename));
+        $imag =  time() .'_' . $file->getClientOriginalName() ;
+       
 
         $user = User::where('id',$id)->update([
             'name' => $request->input('name'),
