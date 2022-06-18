@@ -98,3 +98,5 @@
 <script src="{{asset('asset/js/plugins.js')}}"></script>
 <script src="{{asset('asset/js/jquery.appear.js')}}"></script>
 <script src="{{asset('asset/js/main.js')}}"></script>
+
+<script id="dsq-count-scr" src="//blog-alitgkviwh.disqus.com/count.js" async></script>
