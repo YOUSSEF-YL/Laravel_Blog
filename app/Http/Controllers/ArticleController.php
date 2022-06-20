@@ -44,6 +44,9 @@ class ArticleController extends Controller
         //
     }
 
+ 
+
+
     /**
      * Display the specified resource.
      *
@@ -51,13 +54,17 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($Slug)
-    {       
+    {    $current = Article::where('Slug',$Slug)->first(); 
+
+        $Previous = Article::find(--$current->id );
+        $next = Article::find(++$current->id );
+
          $categorys = category::all();
-          return view('post',compact('categorys'))
+          return view('post',compact('categorys','Previous','next'))
           ->with('article',Article::where('Slug',$Slug)
           ->first());
 
-           
+        
     }
 
     public function showbycategory($category_id)

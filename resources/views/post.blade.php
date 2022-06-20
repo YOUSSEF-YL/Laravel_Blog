@@ -132,15 +132,15 @@
 
 	  			   <div class="pagenav group">
 		  			   <div class="prev-nav">
-		  			   	<a href="#" rel="prev">
+		  			   	<a href="/Post/{{$Previous->slug}}" rel="prev">
 		  			   		<span>Previous</span>
-		  			   		Tips on Minimalist Design 
+		  			   		{{$Previous->title}} 
 		  			   	</a>
 		  			   </div>
 		  				<div class="next-nav">
-		  					<a href="#" rel="next">
+		  					<a href="/Post/{{$next->slug}}" rel="next">
 		  						<span>Next</span>
-		  			   		Less Is More 
+								  {{$next->title}} 
 		  					</a>
 		  				</div>  				   
 	  				</div>
