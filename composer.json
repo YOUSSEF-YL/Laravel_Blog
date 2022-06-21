@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "backpack/crud": "5.0",
+        "backpack/permissionmanager": "^6.0",
         "backpack/settings": "^3.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
