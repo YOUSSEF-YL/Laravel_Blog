@@ -62,11 +62,11 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
                 'dump' => [
 
-                    'dump_binary_path' =>  public_path().'/uploads/backups', // only the path, without `mysqldump` or `pg_dump`
+                    'dump_binary_path' =>  public_path(), // only the path, without `mysqldump` or `pg_dump`
                     // 'dump_binary_path' => '/Applications/MAMP/Library/bin/', // works for MAMP on Mac OS
                     // 'dump_binary_path' => '/opt/homebrew/bin/', // works for Laravel Valet on Mac OS
                     'use_single_transaction',
-                    'timeout' => 60 * 5, // 5 minute timeout
+                    'timeout' => 60 * 5, // 5 mine timeout
                     // 'exclude_tables' => ['table1', 'table2'],
                     // 'add_extra_option' => '--optionname=optionvalue',
                 ]
