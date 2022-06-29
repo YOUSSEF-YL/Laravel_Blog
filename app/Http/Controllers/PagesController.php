@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\category;
 use App\Models\User;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class PagesController extends Controller
@@ -13,32 +14,33 @@ class PagesController extends Controller
         $Articles  = DB::table('articles')->where('featured','0')->get();
         $featuredArticles = DB::table('articles')->where('featured','1')->get();
         $categorys = category::all();
-      
+        $Allarticles = Article::Paginate(4);
 
-      return view('index' , compact('Articles','featuredArticles','categorys'));
+      return view('index' , compact('Articles','featuredArticles','categorys','Allarticles'));
     }
 
 
     public function contact()
     {
       $categorys = category::all();
-      return view('contact')
-      ->with('categorys',$categorys);
+      $Allarticles = Article::Paginate();
+      return view('contact', compact('categorys','Allarticles'));
+      
     }
 
     public function about()
     {
       $categorys = category::all();
-      return view('about')
-      ->with('categorys',$categorys);
+      $Allarticles = Article::Paginate();
+      return view('contact', compact('categorys','Allarticles'));
     }
 
     public function category()
     {
       $categorys = category::all();
+      $Allarticles = Article::Paginate();
 
-      return view('category')
-      ->with('categorys',$categorys);
+      return view('contact', compact('categorys','Allarticles'));
     }
     
     

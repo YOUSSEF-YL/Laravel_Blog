@@ -482,17 +482,25 @@
    	<div class="row">
    		
    		<nav class="pagination">
-		      <span class="page-numbers prev inactive">Prev</span>
-		   	<span class="page-numbers current">1</span>
-		   	<a href="#" class="page-numbers">2</a>
-		      <a href="#" class="page-numbers">3</a>
-		      <a href="#" class="page-numbers">4</a>
-		      <a href="#" class="page-numbers">5</a>
-		      <a href="#" class="page-numbers">6</a>
-		      <a href="#" class="page-numbers">7</a>
-		      <a href="#" class="page-numbers">8</a>
-		      <a href="#" class="page-numbers">9</a>
-		   	<a href="#" class="page-numbers next">Next</a>
+		   
+			
+		   
+		 
+		   
+			
+			@if ($Allarticles->onFirstPage())
+				<a href="{{$Allarticles->previousPageUrl()}}" class="page-numbers prev inactive">Prev</a>
+			@else
+				<a href="{{$Allarticles->previousPageUrl()}}" class="page-numbers prev ">Prev</a>
+			@endif
+
+			@if ($Allarticles->onLastPage())
+				<a href="{{$Allarticles->nextPageUrl()}}" class="page-numbers next inactive">Next</a>
+			@else
+			<a href="{{$Allarticles->nextPageUrl()}}" class="page-numbers next ">Next</a>
+			@endif
+			{{-- {{$Allarticles->links()}} inactive page-numbers current--}}
+			{{-- https://laravel.com/docs/9.x/pagination --}}
 	      </nav>
 
    	</div>
