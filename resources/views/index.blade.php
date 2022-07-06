@@ -122,7 +122,7 @@
 							   <li>
 								<div class="featured-post-slide">
 
-									<div class="post-background" style="background-image:url({{'http://localhost/blog/public/uploads/articles/' . $article->image}})"></div>
+									<div class="post-background" style="background-image:url( {{asset('uploads/articles/' . $article->image)}} )"></div>
 									
 									
 									<div class="overlay"></div>			   		
