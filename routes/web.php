@@ -4,6 +4,9 @@ use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserController;
+use App\Mail\WelcomeMail;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +35,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/myaccount', UserController::class);
+
+Route::get('/email',function($Useremail)
+{
+    mail::to($Useremail)->send(new WelcomeMail());
+    return new WelcomeMail();
+
+});
