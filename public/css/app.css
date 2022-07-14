@@ -57,7 +57,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
   --bs-body-color: #212529;
-  --bs-body-bg: #f8fafc;
+  --bs-body-bg: #18191a;
 }
 
 *,
@@ -2191,7 +2191,7 @@ progress {
   color: #212529;
   background-color: #f8fafc;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #0a0a0a;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7852,7 +7852,7 @@ textarea.form-control-lg {
 
 .bg-white {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+  background-color:var(--bs-primary);
 }
 
 .bg-body {
