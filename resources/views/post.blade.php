@@ -153,7 +153,7 @@
 
 
 
-	@include('layouts.Comments')
+	@include('layouts.fbComments')
 
 
    </section> <!-- end content -->

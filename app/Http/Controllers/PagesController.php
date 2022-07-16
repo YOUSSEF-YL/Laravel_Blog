@@ -32,7 +32,7 @@ class PagesController extends Controller
     {
       $categorys = category::all();
       $Allarticles = Article::Paginate();
-      return view('contact', compact('categorys','Allarticles'));
+      return view('about', compact('categorys','Allarticles'));
     }
 
     public function category()

@@ -53,13 +53,13 @@
 
    			<section>  
 
-   				<div class="content-media">
-						<div id="map-wrap">
-			   			<div id="map-container"></div>
-					      <div id="map-zoom-in"></div>
-							<div id="map-zoom-out"></div>
-			   		</div>  
-					</div>
+				<div class="content-media">
+					<div id="map-wrap">
+					   <div id="map-container"></div>
+					  <div id="map-zoom-in"></div>
+						<div id="map-zoom-out"></div>
+				   </div>  
+				</div>
 
 					<div class="primary-content">
 
@@ -104,9 +104,7 @@
 	  						      <input name="cEmail" type="text" id="cEmail" class="full-width" placeholder="Your Email" value="">
 	                     </div>
 
-	                     <div class="form-field">
-	  						      <input name="cWebsite" type="text" id="cWebsite" class="full-width" placeholder="Website"  value="">
-	                     </div>
+	                    
 
 	                     <div class="message form-field">
 	                        <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message" ></textarea>

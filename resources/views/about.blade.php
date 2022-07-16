@@ -54,7 +54,7 @@
    			<section>  
 
    				<div class="content-media">						
-						<img src="images/thumbs/about-us.jpg">						  
+						<img src="{{asset('asset/images/thumbs/about-us.jpg')}}">						  
 					</div>
 
 					<div class="primary-content">
